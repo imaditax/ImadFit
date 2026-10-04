@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+main {
+    padding: 30px;
+}
+form {
+    width: 300px;
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+body {
+    background-color: #f8f9fa;
+}
+
+
+main {
+    min-height: 80vh;
+}
+
+
+.navbar-brand {
+    font-size: 1.5rem;
+}

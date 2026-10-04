@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Login
+{% endblock %}
+
+
+
+{% block main %}
+
+<div class="container text-center mt-5">
+
+    <h1 class="display-4 fw-bold">
+        Login
+    </h1>
+
+
+    <form action="/login" method="post">
+
+
+        <input
+            class="form-control mb-3"
+            autocomplete="off"
+            name="username"
+            placeholder="Username"
+            type="text">
+
+
+        <input
+            class="form-control mb-3"
+            name="password"
+            placeholder="Password"
+            type="password">
+
+
+        <button class="btn btn-primary">
+            Login
+        </button>
+
+
+    </form>
+
+</div>
+
+
+{% endblock %}

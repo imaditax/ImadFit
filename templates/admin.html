@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Admin
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container mt-5">
+
+    <h1 class="mb-4">Admin Panel</h1>
+
+    <h2>Add Exercise</h2>
+
+    <form action="/admin/add-exercise" method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Exercise name</label>
+
+            <input
+                class="form-control"
+                name="name"
+                placeholder="Example: Bench Press"
+                type="text"
+                required>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Muscles</label>
+
+            <input
+                class="form-control"
+                name="muscles"
+                placeholder="Example: Chest, Triceps"
+                type="text"
+                required>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Equipment</label>
+
+            <input
+                class="form-control"
+                name="equipment"
+                placeholder="Example: Barbell"
+                type="text">
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+
+            <textarea
+                class="form-control"
+                name="description"
+                rows="4"
+                placeholder="Explain how the exercise works..."></textarea>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">YouTube URL</label>
+
+            <input
+                class="form-control"
+                name="video_url"
+                placeholder="https://www.youtube.com/..."
+                type="url">
+        </div>
+
+
+        <button class="btn btn-primary" type="submit">
+            Add Exercise
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

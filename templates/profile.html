@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Profile
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container mt-5">
+
+<h1>
+    Welcome {{ current_user["username"] }}
+</h1>
+
+
+<p>
+    Account type:
+
+    {% if current_user["is_admin"] == 1 %}
+        Admin
+    {% else %}
+        Member
+    {% endif %}
+
+</p>
+
+
+</div>
+
+{% endblock %}

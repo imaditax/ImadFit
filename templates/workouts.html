@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %}
+My Workouts
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+            <h1>My Workouts</h1>
+
+            <p class="text-muted">
+                Track your training and keep your progress organized.
+            </p>
+        </div>
+
+
+        <a href="/workout/new" class="btn btn-primary">
+            + Start Workout
+        </a>
+
+    </div>
+
+
+    {% if workouts %}
+
+        {% for workout in workouts %}
+
+        <div class="card mb-3 shadow-sm">
+
+            <div class="card-body">
+
+                <h5 class="card-title">
+                    {{ workout["type"] }}
+                </h5>
+
+                <p class="card-text text-muted">
+                    {{ workout["date"] }}
+                </p>
+
+                <a
+                    href="/workout/{{ workout['id'] }}"
+                    class="btn btn-outline-primary">
+
+                    View Workout
+
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="text-center mt-5">
+
+            <h3>No workouts yet</h3>
+
+            <p class="text-muted">
+                Start your first workout and begin tracking your progress.
+            </p>
+
+            <a href="/workout/new" class="btn btn-primary">
+                Start Your First Workout
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

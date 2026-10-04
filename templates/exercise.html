@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{{ exercise["name"] }}
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container mt-5">
+
+    <a href="/exercises" class="btn btn-outline-secondary mb-4">
+        ← Back to Exercises
+    </a>
+
+
+    <h1>{{ exercise["name"] }}</h1>
+
+
+    <p class="lead">
+        {{ exercise["muscles"] }}
+    </p>
+
+
+    {% if exercise["equipment"] %}
+
+    <p>
+        <strong>Equipment:</strong>
+        {{ exercise["equipment"] }}
+    </p>
+
+    {% endif %}
+
+
+    {% if exercise["description"] %}
+
+    <div class="mt-4">
+
+        <h3>Description</h3>
+
+        <p>
+            {{ exercise["description"] }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+
+    {% if exercise["video_url"] %}
+
+    <div class="mt-4">
+
+        <h3>How to perform it</h3>
+
+        <a
+            href="{{ exercise['video_url'] }}"
+            target="_blank"
+            class="btn btn-danger">
+
+            ▶ Watch on YouTube
+
+        </a>
+
+    </div>
+
+    {% endif %}
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Start Workout
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container mt-5">
+
+    <h1>Start Workout</h1>
+
+    <p class="text-muted">
+        Create a new training session.
+    </p>
+
+
+    <form action="/workout/new" method="post">
+
+        <div class="mb-3">
+
+            <label class="form-label">
+                Date
+            </label>
+
+            <input
+                type="date"
+                class="form-control"
+                name="date"
+                required>
+
+        </div>
+
+
+        <div class="mb-3">
+
+            <label class="form-label">
+                Workout Type
+            </label>
+
+            <select
+                class="form-select"
+                name="type"
+                required>
+
+                <option value="">Choose a workout</option>
+
+                <option value="Push">
+                    Push
+                </option>
+
+                <option value="Pull">
+                    Pull
+                </option>
+
+                <option value="Legs">
+                    Legs
+                </option>
+
+                <option value="Upper">
+                    Chest + Back
+                </option>
+
+                <option value="Lower">
+                    Arms
+                </option>
+
+                <option value="Full Body">
+                    Cardio
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            class="btn btn-primary"
+            type="submit">
+
+            Start Workout
+
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}
